@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+      <form action="process1.php" method="post">
+      
+        <h1>Company Sign Up</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Your basic info</legend>
+
+          <label for="name">Name:</label>
+          <input type="text" id="comp_name" name="comp_name">
+
+          <label for="branch">CTC offering(in Lakhs):</label>
+          <input type="text" id="ctc" name="ctc">
+        
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="comp_email">
+          
+           <label for="Profile">Job Profile:</label>
+          <select id="profile" name="profile">
+            <option value="Software Developer">Software Developer</option>
+            <option value="Testing">Testing</option>
+            <option value="Web Developer(Front-end)">Web Developer(Front-end)</option>
+            <option value="Web Developer(Back-end)">Web Developer(Back-end)</option>
+            <option value="Android App Developer">Android App Developer</option>
+            <option value="iOS App Developer">iOS App Developer</option>
+            <option value="Software Analyst">Software Analyst</option>
+            <option value="Database Administrator">Database Administrator</option>
+         
+        </select>
+
+        <fieldset>
+          <legend><span class="number">2</span>About the organisation</legend>
+          <label for="comp_bio">Biography:</label>
+          <textarea id="comp_bio" name="comp_bio"></textarea>
+        </fieldset>
+        <fieldset>
+          
+        <button type="submit" value="submit">Sign Up</button>
+      </form>
+      
+    </body>
+</html>
+
+  
+</body>
+</html>
