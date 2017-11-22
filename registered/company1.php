@@ -46,7 +46,7 @@ $result = mysqli_query($connect, "select * from company where id = '$id';");
   <?php
       if (mysqli_num_rows($result) > 0) {
    while($row = mysqli_fetch_assoc($result)) {
-    echo "id: " .$cid=$row["id"]. "name :" .$name=$row["name"];
+    echo "<center>id: " .$cid=$row["id"]. " name :" .$name=$row["name"]. "</center>";
    }  ?>
   <div class="content">
     <div class="content_resize">
@@ -55,7 +55,7 @@ $result = mysqli_query($connect, "select * from company where id = '$id';");
           <h2><span>Hello </span><?php echo "$name"; ?></h2>
           <div class="clr"></div>
           <p>Register yourself on the placement portal for hassle-free placement experience this placement season.</p>
-          <!-- <p><strong>What are we going to offer ?</strong></p> -->
+          <!--  -->
           <!-- <p> -->
             <!-- <ul> -->
               <!-- <li>Get noticed by the recruiters</li> -->
@@ -65,13 +65,19 @@ $result = mysqli_query($connect, "select * from company where id = '$id';");
               <!-- <li>Comparative analysis</li> -->
             <!-- </ul> -->
             <!-- </p> -->
-          <ul class="sb_menu">
+          
             <form action="r1.php" method="post">
               <input type="hidden" name="id" value=<?php echo $id;?> /> 
             <button type="submit" name="submit"> Recruit Students </button>
             <!-- <li><a href="recruit.php?id=<?php //echo "$cid";?>"><strong>Recruit</strong></a></li> -->
-            <li><a href="#"><strong>Statistics</strong></a></li>
-            <li><a href="\Placement_portal\portal\index.php"><strong>Log Out</strong></a></li>
+            <p><strong><h2>Statistics</strong></h2></p>
+            <ul class="sb_menu">
+            <li><a href="\Placement_Portal\statistics\skills_graph.php"><strong>Skill based Distribution of Students(Programming Languages)</strong></a></li>
+            <li><a href="\Placement_Portal\statistics\conc_graph.php"><strong>Skill based Distribution of students(Concepts)</strong></a></li>
+            <li><a href="\Placement_Portal\statistics\branch_total.php"><strong>Department Distribution of students</strong></a></li>
+            <li><a href="\Placement_Portal\statistics\pun.php"><strong>Current stats of Ongoing Placements</strong></a></li>
+            <li><a href="\Placement_Portal\statistics\n2.php"><strong>Gender based Distribution of students</strong></a></li>
+            
             
           </ul>
         </div>
@@ -81,11 +87,7 @@ $result = mysqli_query($connect, "select * from company where id = '$id';");
           <h2 class="star"><span>Menu</span></h2>
           <div class="clr"></div>
           <ul class="sb_menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Student Corner</a></li>
-            <li><a href="#">Companies/Recruiters</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="\Placement_portal\portal\index.php"><strong>Log Out</strong></a></li>
            </ul>
         </div>
         <div class="gadget">

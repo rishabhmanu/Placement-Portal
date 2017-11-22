@@ -51,9 +51,6 @@
 	<label>USN:<input type="text" name="usn" /></label>
 	<button type="submit" value="submit">Submit</button>
 </form>
-<ul class="sb_menu">
-	<li><a href="\Placement_portal\portal\index.php"><strong>Log Out</strong></a></li>
-	</ul>
         </div>
       </div>
       <div class="sidebar">
@@ -61,11 +58,7 @@
           <h2 class="star"><span>Menu</span></h2>
           <div class="clr"></div>
           <ul class="sb_menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Student Corner</a></li>
-            <li><a href="#">Companies/Recruiters</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="\Placement_portal\portal\index.php"><strong>Log Out</strong></a></li>
            </ul>
         </div>
         <div class="gadget">

@@ -41,11 +41,13 @@
       <div class="mainbar">
         <div class="article">
           <h2><span>Excellent Solution</span> For Your Placements</h2>
-          <p class="infopost">Posted on <span class="date">11 sep 2018</span> by <a href="#">Admin</a> &nbsp;&nbsp;|&nbsp;&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a> <a href="#" class="com">Comments <span>11</span></a></p>
+          <!-- <p class="infopost">Posted on <span class="date">11 sep 2018</span> by <a href="#">Admin</a> &nbsp;&nbsp;|&nbsp;&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a> <a href="#" class="com">Comments <span>11</span></a></p> -->
           <div class="clr"></div>
           <div class="img"><img src="images/img1.jpg" width="650" height="196" alt="" class="fl" /></div>
           <div class="post_content">
-            <!-- content in p -->
+            <p> <strong>Give a Headstart to your dream career with the help of this all new Placement Portal!
+            <br> <br> Enjoy a hassel free placement experience in NIE. Register Now. </strong>
+          </p>
           </div>
           <div class="clr"></div>
         </div>
@@ -59,8 +61,6 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">Student Corner</a></li>
             <li><a href="#">Companies/Recruiters</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
         <div class="gadget">

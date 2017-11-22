@@ -1,12 +1,12 @@
  <?php  
  $connect = mysqli_connect("localhost", "rishabh", "manu123", "placement");  
- $query = "SELECT Gender, count(*) as number FROM student GROUP BY gender";  
+ $query = " SELECT Branch, count(*) as number from student where comp IS NOT NULL GROUP BY Branch";  
  $result = mysqli_query($connect, $query);  
  ?>  
  <!DOCTYPE html>  
  <html>  
       <head>  
-           <title>Webslesson Tutorial | Make Simple Pie Chart by Google Chart API with PHP Mysql</title>  
+           <title>Branch wise Division</title>  
            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  
              <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript">
@@ -15,16 +15,16 @@
            function drawChart()  
            {  
                 var data = google.visualization.arrayToDataTable([  
-                          ['Gender', 'Number'],  
+                          ['Branch', 'number'],  
                           <?php  
                           while($row = mysqli_fetch_array($result))  
                           {  
-                               echo "['".$row["Gender"]."', ".$row["number"]."],";  
+                               echo "['".$row["Branch"]."', ".$row["number"]."],";  
                           }  
                           ?>  
                      ]);  
                 var options = {  
-                      title: 'Percentage of Male and Female Student',  
+                      title: 'Branch wise distribution of placed students',  
                       //is3D:true,  
                       pieHole: 0.4  
                      };  
@@ -36,7 +36,7 @@
       <body>  
            <br /><br />  
            <div style="width:900px;">  
-                <h3 align="center">PIE CHART : SEX RATIO</h3>  
+                <h3 align="center">PIE CHART : Branch distribution</h3>  
                 <br />  
                 <div id="piechart" style="width: 900px; height: 500px;"></div>  
            </div>  

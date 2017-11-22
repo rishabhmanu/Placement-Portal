@@ -93,10 +93,14 @@ table, th, td {
               <!-- <li>Comparative analysis</li> -->
             <!-- </ul> -->
             </p>
+            <p> <h2> Statistics </h2> </p>
           <ul class="sb_menu">
-            <li><a href="#"><strong>Companies Visiting</strong></a></li>
-            <li><a href="#"><strong>Statistics</strong></a></li>
-            <li><a href="\Placement_portal\portal\index.php"><strong>Log Out</strong></a></li>
+            <li><a href="\Placement_Portal\statistics\bar.php"><strong>Companies Visiting</strong></a></li>
+            <li><a href="\Placement_Portal\statistics\ctc.php"><strong>CTC wise distribution</strong></a></li>
+            <li><a href="\Placement_Portal\statistics\dept.php"><strong>Distribution of Placed students(Branch-wise)</strong></a></li>
+            <li><a href="\Placement_Portal\statistics\placed.php"><strong>Distribution of Placed students(Company-wise)</strong></a></li>
+            <li><a href="\Placement_Portal\statistics\pun.php"><strong>Current Placement Stats</strong></a></li>
+           
             
           </ul>
         </div>
@@ -106,11 +110,7 @@ table, th, td {
           <h2 class="star"><span>Menu</span></h2>
           <div class="clr"></div>
           <ul class="sb_menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Student Corner</a></li>
-            <li><a href="#">Companies/Recruiters</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact Us</a></li>
+             <li><a href="\Placement_portal\portal\index.php"><strong>Log Out</strong></a></li>
            </ul>
         </div>
         <div class="gadget">
