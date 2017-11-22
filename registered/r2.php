@@ -47,15 +47,21 @@
 	$usn=$_POST['usn'];
 	// echo $id;
 	// echo $usn;
-	$result=mysqli_query($connect, "SELECT * FROM student WHERE USN='$usn' and comp IS NULL;");
+	$result=mysqli_query($connect, "SELECT * FROM student WHERE USN='$usn';");
 	 if (mysqli_num_rows($result) > 0) 
 	{
-		$result1=mysqli_query($connect, "UPDATE student SET comp='$id' WHERE USN='$usn';");
-		echo "success";
+    $result1=mysqli_query($connect, "SELECT * FROM student WHERE USN='$usn' and comp IS NULL;");
+      if (mysqli_num_rows($result1) > 0) {
+		    $result2=mysqli_query($connect, "UPDATE student SET comp='$id' WHERE USN='$usn';");
+		    echo "Success, Student recruited!";
+      }
+      else{
+        echo "Student already has an Offer.";
+      }
 	}
 	else
 	{
-		echo "Failed";
+		echo "USN not found, Try again!";
 		echo mysqli_error ($connect);
 	}
 ?>
