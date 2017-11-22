@@ -1,13 +1,14 @@
  <?php  
  $connect = mysqli_connect("localhost", "rishabh", "manu123", "placement");  
+
  $query = " SELECT count(*) as number from skills where C >= 7";
  $query1 = " SELECT count(*) as number1 from skills where CPP >= 7";
  $query2 = " SELECT count(*) as number2 from skills where Python >= 7";
  $query3 = " SELECT count(*) as number3 from skills where JAVA >= 7";
- $result = mysqli_query($connect, $query);
+ 
  $result1 = mysqli_query($connect, $query1);
  $result2 = mysqli_query($connect, $query2);
- $result3 = mysqli_query($connect, $query3);  
+ $result3 = mysqli_query($connect, $query3); 
  ?>
 
 <!DOCTYPE HTML>
@@ -33,7 +34,7 @@ function drawBasic() {
                           { echo $row2["number2"];} ?>],
         ['Java', <?php while($row3 = mysqli_fetch_array($result3))  
                           { echo $row3["number3"];} ?>],
-        // ['Philadelphia, PA', 1526000]
+      
       ]);
 
       var options = {
