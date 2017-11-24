@@ -32,19 +32,41 @@ $sem6=$_POST['sem6'];
 $cgpa=$_POST['cgpa'];
  
 //Execute the query
- mysqli_query($connect, "INSERT INTO student VALUES('$usn','$name','$branch','$gender','$mobile','$email','$password','$bio');");
+$result = mysqli_query($connect, "select * from student where USN = '$usn';");
+ if (mysqli_num_rows($result) > 0) {
+ 	echo "Student already registered";
+ }
+ else{
 
- mysqli_query($connect, "INSERT INTO skills VALUES('$usn','$c','$cpp','$ds','$java','$python','$dbms','$ada','$os');");
-
- mysqli_query($connect, "INSERT INTO academics VALUES('$usn','$Xth','$XIIth','$sem1','$sem2','$sem3','$sem4','$sem5','$sem6','$cgpa');");
-
-
+ mysqli_query($connect, "INSERT INTO student (USN,Name,Branch,Gender,mobile,email,password,bio) VALUES('$usn','$name','$branch','$gender','$mobile','$email','$password','$bio');");
 	if(mysqli_affected_rows($connect) > 0){
-	echo "<p>Student Added</p>";
+	echo "<p>Student Basics Added</p>";
+	mysqli_query($connect, "INSERT INTO skills VALUES('$usn','$c','$cpp','$ds','$java','$python','$dbms','$ada','$os');");
+	if(mysqli_affected_rows($connect) > 0){
+	echo "<p>Student Skills Added</p>";
+	mysqli_query($connect, "INSERT INTO academics VALUES('$usn','$Xth','$XIIth','$sem1','$sem2','$sem3','$sem4','$sem5','$sem6','$cgpa');");
+	if(mysqli_affected_rows($connect) > 0){
+	echo "<p>Student Added success</p>";
+	
+
 	echo "<a href=\"\Placement_Portal\Login\index.html\">Login</a>";
+} }
 } else {
 	echo "Student NOT Added<br />";
 	echo mysqli_error ($connect);
 }
+}
+ // mysqli_query($connect, "INSERT INTO skills VALUES('$usn','$c','$cpp','$ds','$java','$python','$dbms','$ada','$os');");
+
+ // mysqli_query($connect, "INSERT INTO academics VALUES('$usn','$Xth','$XIIth','$sem1','$sem2','$sem3','$sem4','$sem5','$sem6','$cgpa');");
+
+
+	// if(mysqli_affected_rows($connect) > 0){
+	// echo "<p>Student Added</p>";
+	// echo "<a href=\"\Placement_Portal\Login\index.html\">Login</a>";
+// } else {
+	// echo "Student NOT Added<br />";
+	// echo mysqli_error ($connect);
+// }
 
 ?>
