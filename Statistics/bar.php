@@ -1,5 +1,5 @@
  <?php  
- $connect = mysqli_connect("localhost", "rishabh", "manu123", "placement");  
+ $connect = mysqli_connect("localhost", "rishabh", "manu123", "placement1");  
  $query = " SELECT count(*) as number from company";  
  $result = mysqli_query($connect, $query);  
  ?>

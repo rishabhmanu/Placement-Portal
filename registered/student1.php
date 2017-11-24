@@ -30,7 +30,7 @@ table, th, td {
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="index.html">Placement<span>Portal</span> <small>NIE Mysuru</small></a></h1>
+        <h1><a href="#">Placement<span>Portal</span> <small>NIE Mysuru</small></a></h1>
       </div>
       <div class="clr"></div>
       <div class="menu_nav">
@@ -62,8 +62,8 @@ table, th, td {
           <h2><span>Hello </span><?php echo "$name"; ?></h2>
           <div class="clr"></div>
           <p>Register yourself on the placement portal for hassle-free placement experience this placement season.</p>
-          <p><strong>Companies Visiting(You are Eligible)</strong></p>
-          <p>
+          <p><strong>Companies Visiting(According to Eligiblity)</strong></p>
+          <p> Set your preference, if you are sitting for the placement process (once done can't be changed) </p>
             <?php 
               $result1 = mysqli_query($connect, "select * from company, academics where academics.usn = '$id' and company.cutoff <= academics.cgpa;");
                if (mysqli_num_rows($result1) > 0) {
@@ -82,6 +82,9 @@ table, th, td {
    <?php
                       }
                         echo "</table>";
+                      }
+                      else {
+                        echo "Sorry You are not satisfying the eligiblity criteria for any organisation right now.";
                       }
 
             ?>

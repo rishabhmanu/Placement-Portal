@@ -30,25 +30,37 @@
         <fieldset>
           <legend><span class="number">1</span>Your basic info</legend>
           <label for="usn">USN:</label>
-          <input type="text" id="usn" name="usn">
+          <input type="text" id="usn" name="usn" required>
 
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name">
+          <input type="text" id="name" name="name" required>
 
           <label for="branch">Branch:</label>
-          <input type="text" id="branch" name="branch">
+          <!-- <input type="text" id="branch" name="branch" required> -->
+          <!-- <label for="basics">Branch:</label> -->
+          <select id="branch" name="branch">
+          	<option value="CSE">CSE</option>
+          	<option value="ISE">ISE</option>
+          	<option value="ME">ME</option>
+          	<option value="CVL">CVL</option>
+          	<option value="ECE">ECE</option>
+          	<option value="EEE">EEE</option>
+          	<option value="IP">IP</option>
+        </select>
+
+
           
           <label for="mobile">Mobile No:</label>
-          <input type="text" id="mobile" name="mobile">
+          <input type="text" id="mobile" name="mobile" pattern=".{5,10}" required title="Max 10 digits are allowed">
           
           <label for="mail">Email:</label>
-          <input type="email" id="mail" name="email">
+          <input type="email" id="mail" name="email" required>
           
           <label for="password">Password:</label>
           <input type="password" id="password" name="password">
           
           <label>Gender:</label>
-          <input type="radio" id="m" value="m" name="gender"><label for="m" class="light">Male</label><br>
+          <input type="radio" id="m" value="m" name="gender" checked="checked"><label for="m" class="light">Male</label><br>
           <input type="radio" id="f" value="f" name="gender"><label for="f" class="light">Female</label><br>
           <input type="radio" id="n" value="n" name="gender"><label for="n" class="light">Non Binary</label><br>
         </fieldset>
@@ -196,32 +208,32 @@
 	<fieldset>
           <legend><span class="number">3</span>Academics</legend>
           <label for="Xth">10th(percentage):</label>
-           <input type="text" id="Xth" name="Xth">
+           <input type="text" id="Xth" name="Xth" required>
            
            <label for="XIIth">12th(percentage):</label>
-           <input type="text" id="XIIth" name="XIIth">
+           <input type="text" id="XIIth" name="XIIth" required>
 
            <label for="sem1">1st sem(GPA):</label>
-           <input type="text" id="sem1" name="sem1">
+           <input type="text" id="sem1" name="sem1" required>
 
 
            <label for="sem2">2nd sem(GPA):</label>
-           <input type="text" id="sem2" name="sem2">
+           <input type="text" id="sem2" name="sem2" required>
 
            <label for="sem3">3rd sem(GPA):</label>
-           <input type="text" id="sem3" name="sem3">
+           <input type="text" id="sem3" name="sem3" required>
 
            <label for="sem4">4th sem(GPA):</label>
-           <input type="text" id="sem4" name="sem4">
+           <input type="text" id="sem4" name="sem4" required>
 
            <label for="sem5">5th sem(GPA):</label>
-           <input type="text" id="sem5" name="sem5">
+           <input type="text" id="sem5" name="sem5" required>
 
            <label for="sem6">6th sem(GPA):</label>
-           <input type="text" id="sem6" name="sem6">
+           <input type="text" id="sem6" name="sem6" required>
 
            <label for="cgpa">CGPA(till 6th sem):</label>
-           <input type="text" id="cgpa" name="cgpa">
+           <input type="text" id="cgpa" name="cgpa" required>
 
         
 

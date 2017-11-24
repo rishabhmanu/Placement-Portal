@@ -16,7 +16,7 @@
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="index.html">Placement<span>Portal</span> <small>NIE Mysuru</small></a></h1>
+        <h1><a href="#">Placement<span>Portal</span> <small>NIE Mysuru</small></a></h1>
       </div>
       <div class="clr"></div>
       <div class="menu_nav">
@@ -45,7 +45,7 @@
     <div class="content_resize">
       <div class="mainbar">
         <div class="article">
-
+<h3><strong>Recruit Student</strong></h3>
 <form method="post" action="r2.php">
 	<input type="hidden" name="id" value=<?php echo $id;?> /></label>
 	<label>USN:<input type="text" name="usn" /></label>

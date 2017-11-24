@@ -16,7 +16,7 @@
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="index.html">Placement<span>Portal</span> <small>NIE Mysuru</small></a></h1>
+        <h1><a href="#">Placement<span>Portal</span> <small>NIE Mysuru</small></a></h1>
       </div>
       <div class="clr"></div>
       <div class="menu_nav">

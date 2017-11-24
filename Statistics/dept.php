@@ -1,5 +1,5 @@
  <?php  
- $connect = mysqli_connect("localhost", "rishabh", "manu123", "placement");  
+ $connect = mysqli_connect("localhost", "rishabh", "manu123", "placement1");  
  $query = " SELECT Branch, count(*) as number from student where comp IS NOT NULL GROUP BY Branch";  
  $result = mysqli_query($connect, $query);  
  ?>  

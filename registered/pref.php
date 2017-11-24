@@ -6,7 +6,7 @@ $ans=$_POST['pref'];
 if($ans=='Yes')
 {
 $result = mysqli_query($connect, "UPDATE company SET co_s = co_s+1 where id='$key';");
-echo "Increment success at id" .$key;
+echo "Your preference updated at company id: " .$key;
 }
 else
 {

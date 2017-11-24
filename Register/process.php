@@ -49,8 +49,13 @@ $result = mysqli_query($connect, "select * from student where USN = '$usn';");
 	echo "<p>Student Added success</p>";
 	
 
-	echo "<a href=\"\Placement_Portal\Login\index.html\">Login</a>";
-} }
+	echo "<a href=\"\Placement_Portal\Student_Login\index.php\">Login</a>";
+} 
+else
+ {
+ 	echo mysqli_error ($connect);
+ }
+ }
 } else {
 	echo "Student NOT Added<br />";
 	echo mysqli_error ($connect);

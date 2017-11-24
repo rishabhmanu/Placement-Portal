@@ -23,7 +23,7 @@ $result = mysqli_query($connect, "select * from company where id = '$id';");
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="index.html">Placement<span>Portal</span> <small>NIE Mysuru</small></a></h1>
+        <h1><a href="#">Placement<span>Portal</span> <small>NIE Mysuru</small></a></h1>
       </div>
       <div class="clr"></div>
       <div class="menu_nav">
@@ -47,6 +47,7 @@ $result = mysqli_query($connect, "select * from company where id = '$id';");
       if (mysqli_num_rows($result) > 0) {
    while($row = mysqli_fetch_assoc($result)) {
     echo "<center>id: " .$cid=$row["id"]. " name :" .$name=$row["name"]. "</center>";
+    $co_s=$row["co_s"];
    }  ?>
   <div class="content">
     <div class="content_resize">
@@ -54,9 +55,9 @@ $result = mysqli_query($connect, "select * from company where id = '$id';");
         <div class="article">
           <h2><span>Hello </span><?php echo "$name"; ?></h2>
           <div class="clr"></div>
-          <p>Register yourself on the placement portal for hassle-free placement experience this placement season.</p>
+          <p>Now recruit students by directly entering their USNs.</p>
           <!--  -->
-          <!-- <p> -->
+          <p> No. of students sitting for the placement process: <?php echo $co_s; ?>
             <!-- <ul> -->
               <!-- <li>Get noticed by the recruiters</li> -->
               <!-- <li>Get each and every statistics</li> -->

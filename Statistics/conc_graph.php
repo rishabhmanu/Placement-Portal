@@ -1,5 +1,5 @@
  <?php  
- $connect = mysqli_connect("localhost", "rishabh", "manu123", "placement");  
+ $connect = mysqli_connect("localhost", "rishabh", "manu123", "placement1");  
  
  $query = " SELECT count(*) as number from skills where OS >= 7";
  $query1 = " SELECT count(*) as number1 from skills where DS >= 7";

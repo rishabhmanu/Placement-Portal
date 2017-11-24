@@ -1,5 +1,5 @@
  <?php  
- $connect = mysqli_connect("localhost", "rishabh", "manu123", "placement");  
+ $connect = mysqli_connect("localhost", "rishabh", "manu123", "placement1");  
  $query = " SELECT CTC, count(*) as number from company, student where student.comp=company.id and student.comp IS NOT NULL GROUP BY CTC";  
  $result = mysqli_query($connect, $query);  
  ?>  
